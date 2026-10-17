@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#050916">
+  <meta name="description" content="A cinematic graduation surprise made with 4U celebrations.">
+  <title>Mission Accomplished | 4U Celebrations</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="ambient-glow glow-one"></div>
+  <div class="ambient-glow glow-two"></div>
+  <div class="stars" id="stars"></div>
+  <div class="particle-layer" id="particleLayer"></div>
+
+  <!-- Top navigation -->
+  <header class="navbar">
+    <a class="brand" href="https://mohvmed-imvm.github.io/4U-celebration/" aria-label="4U Celebrations home">
+      <span class="brand-mark">4U</span>
+      <span class="brand-caption">celebrations</span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-button" id="settingsBtn" aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.8 3.1-.2-.1a1.7 1.7 0 0 0-1.8.1 1.7 1.7 0 0 0-.9 1.5v.2h-3.6v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8-.1l-.2.1-1.8-3.1.1-.1A1.7 1.7 0 0 0 7.1 15a1.7 1.7 0 0 0-1.5-.9h-.2v-3.6h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.1-1.8l-.1-.2 3.1-1.8.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 .9-1.5v-.2h3.6v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.1l.2-.1 1.8 3.1-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5.9h.2v3.6h-.2a1.7 1.7 0 0 0-1.5.9Z" transform="translate(-1 -1) scale(.96)"></path>
+        </svg>
+      </button>
+
+      <button class="language-button" id="languageBtn" type="button">العربية</button>
+    </div>
+  </header>
+
+  <!-- Demo notice -->
+  <button class="demo-badge" id="demoBtn" type="button">
+    <span class="demo-dot"></span>
+    <span data-i18n="demoBadge">DEMO TEMPLATE · CUSTOMIZABLE</span>
+    <span class="demo-info">ⓘ</span>
+  </button>
+
+  <!-- Intro countdown -->
+  <section class="intro" id="intro" aria-label="Graduation introduction">
+    <div class="intro-orbit orbit-a"></div>
+    <div class="intro-orbit orbit-b"></div>
+
+    <div class="intro-content">
+      <div class="intro-kicker">
+        <span class="status-light"></span>
+        <span data-i18n="introKicker">A NEW CHAPTER BEGINS</span>
+      </div>
+
+      <p class="intro-small" data-i18n="introSmall">PREPARE FOR THE FINAL MOMENT</p>
+      <div class="countdown-number" id="countdownNumber">3</div>
+      <h1 class="intro-title" data-i18n="introTitle">YOUR JOURNEY. YOUR LEGACY.</h1>
+      <p class="intro-description" data-i18n="introDescription">
+        Every challenge led you here.
+      </p>
+
+      <button class="primary-button intro-button" id="startBtn" type="button">
+        <span data-i18n="startMission">BEGIN YOUR FINAL MISSION</span>
+        <span class="button-arrow">↗</span>
+      </button>
+
+      <p class="intro-hint" data-i18n="introHint">A MOMENT MADE JUST FOR YOU</p>
+    </div>
+  </section>
+
+  <!-- Main experience -->
+  <main class="main-content" id="mainContent" hidden>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span data-i18n="heroEyebrow">THE FINAL MISSION</span>
+        </div>
+
+        <p class="hero-overline" data-i18n="heroOverline">THIS IS YOUR MOMENT</p>
+
+        <h1 class="hero-title">
+          <span data-i18n="heroTitleOne">MISSION</span>
+          <span class="title-highlight" data-i18n="heroTitleTwo">ACCOMPLISHED</span>
+        </h1>
+
+        <p class="hero-description" data-i18n="heroDescription">
+          You dreamed it. You worked for it. Now it's yours.
+        </p>
+
+        <div class="hero-meta">
+          <span class="meta-icon">✦</span>
+          <span data-i18n="heroMeta">ONE JOURNEY. A THOUSAND MEMORIES.</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="visual-ring ring-one"></div>
+        <div class="visual-ring ring-two"></div>
+        <div class="visual-glow"></div>
+
+        <div class="graduation-cap" aria-hidden="true">
+          <div class="cap-top"></div>
+          <div class="cap-base"></div>
+          <div class="cap-button"></div>
+          <div class="cap-tassel"></div>
+        </div>
+
+        <div class="diploma" aria-hidden="true">
+          <div class="diploma-ribbon"></div>
+          <span>CLASS OF</span>
+          <strong>2026</strong>
+          <small>THE NEXT CHAPTER</small>
+        </div>
+
+        <div class="visual-label">
+          <span class="visual-label-dot"></span>
+          <span data-i18n="visualLabel">LEVEL COMPLETED</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission progress -->
+    <section class="mission-section section-shell reveal" id="mission">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-i18n="missionKicker">OPERATION: GRADUATION</p>
+          <h2 data-i18n="missionTitle">Look how far you've come.</h2>
+        </div>
+        <span class="mission-code">4U / 001</span>
+      </div>
+
+      <div class="progress-card">
+        <div class="progress-top">
+          <div>
+            <span class="progress-label" data-i18n="progressLabel">MISSION PROGRESS</span>
+            <p class="progress-status" id="progressStatus" data-i18n="progressInitial">
+              Awaiting final confirmation...
+            </p>
+          </div>
+          <strong class="progress-number" id="progressNumber">0%</strong>
+        </div>
+
+        <div class="progress-track" role="progressbar" aria-label="Mission progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+          <div class="progress-shine"></div>
+        </div>
+
+        <div class="progress-bottom">
+          <span data-i18n="progressStart">THE DREAM</span>
+          <span class="progress-center" data-i18n="progressCenter">THE HARD WORK</span>
+          <span data-i18n="progressEnd">THE ACHIEVEMENT</span>
+        </div>
+
+        <button class="primary-button mission-button" id="completeMissionBtn" type="button">
+          <span data-i18n="completeMission">COMPLETE THE MISSION</span>
+          <span class="button-arrow">↗</span>
+        </button>
+
+        <p class="mission-note" data-i18n="missionNote">
+          One last step before your big reveal.
+        </p>
+      </div>
+    </section>
+
+    <!-- Achievement cards -->
+    <section class="journey-section section-shell reveal" id="journey">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-i18n="journeyKicker">YOUR STORY SO FAR</p>
+          <h2 data-i18n="journeyTitle">Every step mattered.</h2>
+        </div>
+      </div>
+
+      <div class="journey-grid">
+        <article class="journey-card">
+          <span class="journey-number">01</span>
+          <div class="journey-icon">⌁</div>
+          <h3 data-i18n="cardOneTitle">The Dream</h3>
+          <p data-i18n="cardOneText">It started with a goal only you could see.</p>
+          <span class="card-bottom-line"></span>
+        </article>
+
+        <article class="journey-card">
+          <span class="journey-number">02</span>
+          <div class="journey-icon">✧</div>
+          <h3 data-i18n="cardTwoTitle">The Grind</h3>
+          <p data-i18n="cardTwoText">The late nights, the doubts, the comeback.</p>
+          <span class="card-bottom-line"></span>
+        </article>
+
+        <article class="journey-card">
+          <span class="journey-number">03</span>
+          <div class="journey-icon">♜</div>
+          <h3 data-i18n="cardThreeTitle">The Victory</h3>
+          <p data-i18n="cardThreeText">You kept going. Now look at you.</p>
+          <span class="card-bottom-line"></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Memories -->
+    <section class="memories-section section-shell reveal" id="memories">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker" data-i18n="memoriesKicker">THE MOMENTS THAT MADE YOU</p>
+          <h2 data-i18n="memoriesTitle">Memories worth keeping.</h2>
+        </div>
+      </div>
+
+      <div class="memory-grid">
+        <figure class="memory-frame memory-large">
+          <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1000&q=85" alt="Graduation celebration" loading="lazy">
+          <figcaption data-i18n="memoryOne">The day it all became real.</figcaption>
+        </figure>
+
+        <figure class="memory-frame">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=85" alt="Graduates celebrating together" loading="lazy">
+          <figcaption data-i18n="memoryTwo">The people who made it better.</figcaption>
+        </figure>
+
+        <figure class="memory-frame">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=85" alt="Friends celebrating a milestone" loading="lazy">
+          <figcaption data-i18n="memoryThree">A memory for the next chapter.</figcaption>
+        </figure>
+      </div>
+
+      <p class="photo-hint" data-i18n="photoHint">
+        Demo photos — replace them with your own memories.
+      </p>
+    </section>
+
+    <!-- Final reveal -->
+    <section class="reveal-section section-shell reveal" id="revealSection">
+      <div class="reveal-card">
+        <div class="reveal-card-glow"></div>
+        <div class="reveal-eyebrow">
+          <span>✦</span>
+          <span data-i18n="revealEyebrow">THE FINAL REWARD</span>
+          <span>✦</span>
+        </div>
+
+        <h2 data-i18n="revealTitle">Ready for your next chapter?</h2>
+        <p data-i18n="revealDescription">
+          Your biggest achievement isn't just what you finished. It's who you became along the way.
+        </p>
+
+        <button class="gift-button" id="giftButton" type="button" aria-expanded="false">
+          <span class="gift-aura"></span>
+          <span class="gift-box" aria-hidden="true">
+            <span class="gift-lid"></span>
+            <span class="gift-body"></span>
+            <span class="gift-ribbon-vertical"></span>
+            <span class="gift-ribbon-horizontal"></span>
+            <span class="gift-bow bow-left"></span>
+            <span class="gift-bow bow-right"></span>
+          </span>
+          <span class="gift-button-label" data-i18n="giftButtonLabel">UNLOCK YOUR MESSAGE</span>
+        </button>
+
+        <p class="gift-hint" data-i18n="giftHint">Tap the gift to reveal your surprise.</p>
+
+        <div class="final-message" id="finalMessage" hidden>
+          <div class="final-medal">✦</div>
+          <p class="final-kicker" data-i18n="finalKicker">MISSION ACCOMPLISHED</p>
+          <h3 data-i18n="finalTitle">You made it.</h3>
+          <p class="final-text" data-i18n="finalText">
+            This is more than a graduation. It's proof that you can keep going, even when the road gets hard. Be proud of every step, celebrate this moment, and never stop believing in what comes next. The world is waiting for you.
+          </p>
+          <div class="final-signature" data-i18n="finalSignature">Your next chapter starts now.</div>
+          <div class="final-confetti" id="finalConfetti"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-brand">4U <span>celebrations</span></div>
+      <p data-i18n="footerLine">Made for a moment that deserves to be remembered.</p>
+      <a href="https://mohvmed-imvm.github.io/4U-celebration/" class="footer-link" data-i18n="footerLink">Discover 4U Celebrations ↗</a>
+      <div class="made-with">made with <strong>4U</strong></div>
+    </footer>
+  </main>
+
+  <!-- Demo information modal -->
+  <div class="modal-backdrop" id="demoModal" hidden>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <button class="modal-close" id="closeDemoModal" type="button" aria-label="Close">×</button>
+      <div class="modal-symbol">ⓘ</div>
+      <p class="modal-kicker" data-i18n="modalKicker">A LITTLE NOTE</p>
+      <h2 id="demoModalTitle" data-i18n="modalTitle">This is a demo template</h2>
+      <p data-i18n="modalText">
+        Everything you see here is customizable. Names, photos, messages, colors, music, and details can be personalized for your celebration.
+      </p>
+      <a class="primary-button modal-order" href="https://mohvmed-imvm.github.io/4U-celebration/" data-i18n="modalOrder">EXPLORE 4U CELEBRATIONS ↗</a>
+      <p class="modal-footnote" data-i18n="modalFootnote">Your story. Your style. Your moment.</p>
+    </section>
+  </div>
+
+  <!-- Settings modal -->
+  <div class="modal-backdrop" id="settingsModal" hidden>
+    <section class="modal-card settings-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <button class="modal-close" id="closeSettingsModal" type="button" aria-label="Close">×</button>
+      <div class="modal-symbol">⚙</div>
+      <p class="modal-kicker" data-i18n="settingsKicker">YOUR EXPERIENCE</p>
+      <h2 id="settingsTitle" data-i18n="settingsTitle">Settings</h2>
+
+      <div class="setting-row">
+        <span data-i18n="languageSetting">Language</span>
+        <button class="setting-action" id="settingsLanguageBtn" type="button">العربية</button>
+      </div>
+
+      <div class="setting-row">
+        <span data-i18n="themeSetting">Appearance</span>
+        <button class="setting-action" id="themeBtn" type="button" data-i18n="themeDark">Dark mode</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Music -->
+  <audio id="graduationMusic" src="graduation.mp3" loop preload="none"></audio>
+
+  <div class="music-control" id="musicControl" hidden>
+    <button id="musicToggle" type="button" aria-label="Toggle music">
+      <span class="music-bars"><i></i><i></i><i></i><i></i></span>
+      <span data-i18n="musicLabel">MUSIC</span>
+    </button>
+  </div>
+</body>
+</html>
